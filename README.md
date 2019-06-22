@@ -22,6 +22,7 @@ Usage of the control panel requires a JavaScript enabled browser.
 ## Dependencies
 * [node](https://nodejs.org/) / npm
 * PHP v7.x in `PATH`
+* [Composer](https://getcomposer.org/)
 
 ## Building
 ```bash
