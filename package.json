@@ -11,6 +11,7 @@
         "type": "git",
         "url": "https://github.com/oliverbooth/vr-pilot.git"
     },
+    "license": "Apache-2.0",
     "scripts": {
         "build": "gulp clean && gulp"
     },
