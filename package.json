@@ -12,7 +12,9 @@
         "url": "https://github.com/oliverbooth/vr-pilot.git"
     },
     "scripts": {
-        "build": "gulp clean && gulp"
+        "setup": "composer install",
+        "clean": "gulp clean",
+        "build": "gulp"
     },
     "devDependencies": {
         "@cedx/gulp-php-minify": "^9.3.0",
