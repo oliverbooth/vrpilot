@@ -20,7 +20,6 @@
         "gulp": "^4.0.2",
         "gulp-browserify": "^0.5.1",
         "gulp-clean": "^0.4.0",
-        "gulp-concat": "^2.6.1",
         "gulp-copy": "^4.0.1",
         "gulp-csso": "^3.0.1",
         "gulp-htmlmin": "^5.0.1",
