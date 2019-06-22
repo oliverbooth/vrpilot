@@ -33,6 +33,6 @@
         "gulp-uglify-es": "^1.0.4"
     },
     "dependencies": {
-        "semver-compare": "^1.0.0"
+        "semver": "^6.1.1"
     }
 }
