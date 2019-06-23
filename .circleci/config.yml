@@ -1,14 +1,25 @@
-version: 2.1
+version: 2.0
 jobs:
-  setup:
-    machine:
-      image: ubuntu-1604:201903-01
-    steps:
-      - run:
-        command: composer install
   build:
-    machine:
-      image: ubuntu-1604:201903-01
+    docker:
+      - image: circleci/node:latest
+    steps:
+      - checkout
+      - run:
+          name: Update npm
+          command: 'sudo npm install -g npm@latest'
+      - restore_cache:
+          key: dependency-cache-{{ checksum "package.json" }}
+      - run:
+          name: Install npm
+          command: npm install
+      - save_cache:
+          key: dependency-cache-{{ checksum "package.json" }}
+          paths:
+            - node_modules
+  test:
+    docker:
+      - image: circleci/node:latest
     steps:
       - run:
         command: npm run build
@@ -16,5 +27,10 @@ workflows:
   version: 2
   build:
     jobs:
-      - setup
       - build
+      - test:
+          requires:
+            - build
+          filters:
+            branches:
+              only: master
