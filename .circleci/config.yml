@@ -8,3 +8,8 @@ orbs:
           npm i
           composer install
           npm run build
+workflows:
+  version: 2
+  build:
+    jobs:
+    - build
