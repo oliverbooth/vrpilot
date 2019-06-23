@@ -90,5 +90,17 @@ $app->get("/watch", function (Request $request, Response $response, array $args)
     ]);
 });
 
+$app->get("/install", function (Request $request, Response $response, array $args) use ($app, $tv) {
+    if (file_exists("internal/templates/install")) {
+        $this->view->setLayout("install/layout.phtml");
+
+        return $this->view->render($response, "install/start.phtml", [
+            "tv" => $tv
+        ]);
+    } else {
+        return $response->withHeader("Location", "/admin");
+    }
+});
+
 $app->run();
 ?>
