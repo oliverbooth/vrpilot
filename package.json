@@ -1,5 +1,5 @@
 {
-    "name": "vr-pilot",
+    "name": "vrpilot",
     "version": "0.1.0-alpha.1",
     "description": "PHP TV station control panel",
     "author": {
@@ -9,11 +9,14 @@
     },
     "repository": {
         "type": "git",
-        "url": "https://github.com/oliverbooth/vr-pilot.git"
+        "url": "https://github.com/oliverbooth/vrpilot.git"
     },
     "license": "Apache-2.0",
     "scripts": {
-        "build": "gulp clean && gulp"
+        "setup": "composer install",
+        "clean": "gulp clean",
+        "build": "gulp",
+        "clean-build": "gulp clean && gulp"
     },
     "devDependencies": {
         "@cedx/gulp-php-minify": "^9.3.0",
@@ -21,7 +24,6 @@
         "gulp": "^4.0.2",
         "gulp-browserify": "^0.5.1",
         "gulp-clean": "^0.4.0",
-        "gulp-concat": "^2.6.1",
         "gulp-copy": "^4.0.1",
         "gulp-csso": "^3.0.1",
         "gulp-htmlmin": "^5.0.1",
@@ -33,6 +35,6 @@
         "gulp-uglify-es": "^1.0.4"
     },
     "dependencies": {
-        "semver-compare": "^1.0.0"
+        "semver": "^6.1.1"
     }
 }

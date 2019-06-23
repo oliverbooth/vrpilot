@@ -1,8 +1,8 @@
 # VRPilot
-![](https://img.shields.io/github/package-json/v/oliverbooth/vr-pilot.svg)
-![](https://img.shields.io/github/license/oliverbooth/vr-pilot.svg)
-![](https://img.shields.io/github/issues/oliverbooth/vr-pilot.svg)
-![](https://img.shields.io/david/dev/oliverbooth/vr-pilot.svg)
+![](https://img.shields.io/github/package-json/v/oliverbooth/vrpilot.svg)
+![](https://img.shields.io/github/license/oliverbooth/vrpilot.svg)
+![](https://img.shields.io/github/issues/oliverbooth/vrpilot.svg)
+![](https://img.shields.io/david/dev/oliverbooth/vrpilot.svg)
 
 PHP TV station control panel.
 
@@ -12,7 +12,7 @@ VRPilot is a sophisticated web tool based on [AWDigie](oliverbooth/awdigie) orig
 *\* Real name withheld*
 
 ## Download
-Grab the [latest release](oliverbooth/vr-pilot/releases), or you can build from source using the instructions below.
+Grab the [latest release](oliverbooth/vrpilot/releases), or you can build from source using the instructions below.
 
 ## Runtime Prerequisites
 The server host must be running PHP v7.x or above, and have the [`libGD`](https://www.php.net/manual/en/book.image.php) module installed and enabled.

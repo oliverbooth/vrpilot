@@ -4,7 +4,6 @@ const gulpClean = require("gulp-clean");
 const sass = require("gulp-sass");
 const uglify = require("gulp-uglify-es").default;
 const htmlmin = require("gulp-htmlmin");
-const concat = require("gulp-concat");
 const rename = require("gulp-rename");
 const gulpCopy = require("gulp-copy");
 const inject = require("gulp-inject-string");
@@ -22,7 +21,7 @@ function clean() {
 }
 
 function copy() {
-    src(["src/**/.*", "src/**/*.min.*", "src/**/*.ttf", "src/**/*.jpg", "src/**/*.png", "src/**/*.db"])
+    src(["src/**/.*", "src/**/*.min.*", "src/**/*.ttf", "src/**/*.jpg", "src/**/*.png", "src/**/*.db", "src/**/*.json"])
         .pipe(gulpCopy("dist", { prefix: 1 }))
         .pipe(inject.replace("<%PKG.VERSION%>", pkg.version));
 
@@ -48,7 +47,7 @@ function js() {
 }
 
 function php() {
-    return src("src/**/*.php", { read: false })
+    return src(["src/**/*.php", "src/**/*.phtml"], { read: false })
         .pipe(phpMinify())
         .pipe(htmlmin({ collapseWhitespace: true }))
         .pipe(inject.replace("<%PKG.VERSION%>", pkg.version))

@@ -2,6 +2,9 @@
     "require": {
         "phlak/semver": "^2.0",
         "slim/php-view": "^2.2",
-        "slim/slim": "3.12"
+        "slim/slim": "3.12",
+        "ramsey/uuid": "^3.8",
+        "stil/gd-text": "^1.1",
+        "imagine/imagine": "^1.2"
     }
 }
