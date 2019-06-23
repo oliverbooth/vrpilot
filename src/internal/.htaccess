@@ -1,0 +1,7 @@
+<IfDefine APACHE24>
+    Require all denied
+</IfDefine>
+<IfDefine !APACHE24>
+    Order Deny,Allow
+    Deny from all
+</IfDefine>

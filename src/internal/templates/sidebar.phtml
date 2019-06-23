@@ -1,0 +1,80 @@
+<li class="nav-item <?php print($page === "dashboard" ? "active" : ""); ?>">
+    <a class="nav-link" href="/admin/dashboard">
+        <i class="fas fa-fw fa-tachometer-alt"></i>
+        <span>Dashboard</span>
+    </a>
+</li>
+
+<hr class="sidebar-divider">
+
+<div class="sidebar-heading">
+    General
+</div>
+
+<li class="nav-item <?php print($page === "shows" || $page === "schedule" ? "active" : ""); ?>">
+    <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseProgramming" aria-expanded="true" aria-controls="collapseProgramming">
+        <i class="fas fa-list"></i>
+        <span>Programming</span>
+    </a>
+    <div id="collapseProgramming" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+        <div class="bg-white py-2 collapse-inner rounded">
+            <h6 class="collapse-header">Programming</h6>
+            <a class="collapse-item" href="/admin/shows">Shows</a>
+            <a class="collapse-item" href="/admin/schedule">Scheduling</a>
+        </div>
+    </div>
+</li>
+
+<li class="nav-item <?php print($page === "live" ? "active" : ""); ?>">
+    <a class="nav-link" href="/admin/live">
+        <i class="fas fa-video"></i>
+        <span>Live Channels</span>
+    </a>
+</li>
+
+<hr class="sidebar-divider">
+
+<div class="sidebar-heading">
+    Management
+</div>
+
+<li class="nav-item">
+    <a class="nav-link" href="statistics">
+        <i class="fas fa-chart-line"></i>
+        <span>Statistics</span>
+    </a>
+</li>
+
+<li class="nav-item <?php print($page === "config" ? "active" : ""); ?>">
+    <a class="nav-link" href="config">
+        <i class="fas fa-cog"></i>
+        <span>Configuration</span>
+    </a>
+</li>
+
+<hr class="sidebar-divider">
+
+<div class="sidebar-heading">
+    Addons
+</div>
+
+<li class="nav-item">
+    <a class="nav-link" href="/addons/browse">
+        <i class="fas fa-puzzle-piece"></i>
+        <span>Browse</span>
+    </a>
+</li>
+
+<li class="nav-item">
+    <a class="nav-link" href="/addons/marketplace">
+        <i class="fas fa-store-alt"></i>
+        <span>Marketplace</span>
+    </a>
+</li>
+
+<hr class="sidebar-divider">
+
+<li class="nav-item text-center">
+    <span id="app-version-span" class="small text-gray-200"><%PKG.VERSION%></span><br>
+    <span id="app-update-span" class="small text-light"><i class="fas fa-fw fa-sync fa-spin"></i> Checking for updates &hellip;</span>
+</li>

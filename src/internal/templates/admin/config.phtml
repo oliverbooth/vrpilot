@@ -1,0 +1,40 @@
+<div class="d-sm-flex align-items-center justify-content-between mb-4">
+    <h1 class="h3 mb-0 text-gray-800">Configuration</h1>
+</div>
+
+<div class="row">
+    <div class="col-sm-12">
+        <div class="card shadow mb-4">
+            <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                <h6 class="m-0 font-weight-bold text-primary">Station</h6>
+            </div>
+
+            <div class="card-body">
+                <table class="table table-borderless table-sm">
+                    <tr>
+                        <td>Name</td>
+                        <td><input type="text" class="form-control" value="<?php print($tv->getStationName()); ?>"></td>
+                    </tr>
+                    <tr>
+                        <td>Image Quality</td>
+                        <td><input type="number" min="10" max="100" class="form-control" value="<?php print($tv->getTvQuality()); ?>"></td>
+                    </tr>
+                    <tr>
+                        <td>Image Resolution</td>
+                        <td>
+                            <div class="input-group">
+                                <input type="number" min="1" class="form-control" value="<?php print($tv->getTvWidth()); ?>">
+                                <span class="input-group-text">x</span>
+                                <input type="number" min="1" class="form-control" value="<?php print($tv->getTvHeight()); ?>">
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Seconds per Frame</td>
+                        <td><input type="number" min="1" class="form-control" value="<?php print($tv->getSecondsPerFrame()); ?>"></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

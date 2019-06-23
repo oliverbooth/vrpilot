@@ -1,0 +1,21 @@
+Options -Indexes
+
+<IfDefine APACHE24>
+    Require all granted
+</IfDefine>
+<IfDefine !APACHE24>
+    Order Deny,Allow
+    Allow from all
+</IfDefine>
+
+<IfModule mod_rewrite.c>
+    DirectoryIndex index.php
+    RewriteEngine On
+
+    RewriteBase /api
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteRule . index.php [L]
+</IfModule>
+
+ErrorDocument 404 /404

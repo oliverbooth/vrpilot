@@ -1,0 +1,153 @@
+<div class="d-sm-flex align-items-center justify-content-between mb-4">
+    <h1 class="h3 mb-0 text-gray-800">Dashboard</h1>
+    <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i class="fas fa-download fa-sm text-white-50"></i> Generate Report</a>
+</div>
+
+<div class="row">
+    <div class="col-xl-3 col-md-6 mb-4">
+        <div class="card border-left-primary shadow h-100 py-2">
+            <div class="card-body">
+                <div class="row no-gutters align-items-center">
+                    <div class="col mr-2">
+                        <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">Current Status</div>
+                        <div class="h5 mb-0 font-weight-bold text-gray-800">
+                            <?php
+                            $mode = $tv->getBroadcastMode();
+                            switch ($mode) {
+                                case \VRPilot\BroadcastMode::REGULAR:
+                                    $class = "success";
+                                    $icon = "tv";
+                                    $text = "Regular Programming";
+                                    break;
+                                case \VRPilot\BroadcastMode::LIVE:
+                                    $class = "danger";
+                                    $icon = "video";
+                                    $text = "Live Now";
+                                    break;
+                                case \VRPilot\BroadcastMode::TECHDIFF:
+                                    $class = "warning";
+                                    $icon = "exclamation-triangle";
+                                    $text = "Technical Difficulties";
+                                    break;
+                            }
+                            ?>
+                            <span id="dashboard-mode-display" class="badge badge-secondary">
+                                <i class="fas fa-spinner fa-spin"></i> Fetching...
+                            </span>
+                        </div>
+                    </div>
+                    <div class="col-auto">
+                        <i class="fas fa-info-circle fa-2x text-gray-300"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-xl-3 col-md-6 mb-4">
+        <div class="card border-left-success shadow h-100 py-2">
+            <div class="card-body">
+                <div class="row no-gutters align-items-center">
+                    <div class="col mr-2">
+                        <div class="text-xs font-weight-bold text-success text-uppercase mb-1">Realtime Ratings</div>
+                        <div class="h5 mb-0 font-weight-bold text-gray-800">0 viewers</div>
+                    </div>
+                    <div class="col-auto">
+                        <i class="fas fa-users fa-2x text-gray-300"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-xl-3 col-md-6 mb-4">
+        <div class="card border-left-info shadow h-100 py-2">
+            <div class="card-body">
+                <div class="row no-gutters align-items-center">
+                    <div class="col mr-2">
+                        <div class="text-xs font-weight-bold text-info text-uppercase mb-1">Now Airing</div>
+                        <div class="h5 mb-0 font-weight-bold text-gray-800">PTV News</div>
+                        <div class="progress progress-sm mr-2">
+                            <div class="progress-bar bg-info" role="progressbar" style="width: 33%" aria-valuenow="33" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                    </div>
+                    <div class="col-auto">
+                        <i class="fas fa-satellite-dish fa-2x text-gray-300"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-xl-3 col-md-6 mb-4">
+        <div class="card border-left-warning shadow h-100 py-2">
+            <div class="card-body">
+                <div class="row no-gutters align-items-center">
+                    <div class="col mr-2">
+                        <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">Checks</div>
+                        <div class="h5 mb-0 font-weight-bold text-success"><i class="fas fa-fw fa-check-circle"></i> All OK</div>
+                    </div>
+                    <div class="col-auto">
+                        <i class="fas fa-fw fa-exclamation fa-2x text-gray-300"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="row">
+    <div class="col-sm-12 col-lg-6">
+        <div class="card shadow mb-4">
+            <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                <h6 class="m-0 font-weight-bold text-primary">Watch</h6>
+            </div>
+
+            <div class="card-body">
+                <img id="dashboard-watch-preview" src="/watch" width="100%">
+            </div>
+        </div>
+    </div>
+
+    <div class="col-sm-12 col-lg-6">
+        <div class="card shadow mb-4">
+            <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                <h6 class="m-0 font-weight-bold text-primary">Viewing Sessions</h6>
+            </div>
+
+            <div class="card-body">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <td>IP</td>
+                            <td>Source</td>
+                            <td>Last Ping</td>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+
+                        <tr>
+                            <td>127.0.0.1</td>
+                            <td>Active Worlds Browser</td>
+                            <td>
+                                1 second ago
+                                <div class="progress-bar" role="progressbar" style="width: 90%" aria-valuenow="9" aria-valuemin="0" aria-valuemax="10"></div>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>81.96.5.25</td>
+                            <td>Virtual Paradise Browser</td>
+                            <td>
+                                4 seconds ago
+                                <div class="progress-bar" role="progressbar" style="width: 60%" aria-valuenow="6" aria-valuemin="0" aria-valuemax="10"></div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
