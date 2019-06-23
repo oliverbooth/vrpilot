@@ -1,18 +1,19 @@
 # VRPilot
 ![](https://img.shields.io/github/package-json/v/oliverbooth/vrpilot.svg)
-![](https://img.shields.io/github/license/oliverbooth/vrpilot.svg)
-![](https://img.shields.io/github/issues/oliverbooth/vrpilot.svg)
+![](https://img.shields.io/circleci/build/github/oliverbooth/vrpilot/master.svg)
 ![](https://img.shields.io/david/dev/oliverbooth/vrpilot.svg)
+![](https://img.shields.io/github/issues/oliverbooth/vrpilot.svg)
+![](https://img.shields.io/github/license/oliverbooth/vrpilot.svg)
 
 PHP TV station control panel.
 
 ## About
-VRPilot is a sophisticated web tool based on [AWDigie](oliverbooth/awdigie) originally written by Pineriver*, providing users of [Active Worlds](https://activeworlds.com/), [Virtual Paradise](https://virtualparadise.org/), and similar platforms, the ability to control and monitor TV stations created from automated PHP image rotation. The platform supports live broadcasting, predefined programming, watermarking, among other features.
+VRPilot is a sophisticated web tool based on [AWDigie](https://github.com/oliverbooth/awdigie) originally written by Pineriver*, providing users of [Active Worlds](https://activeworlds.com/), [Virtual Paradise](https://virtualparadise.org/), and similar platforms, the ability to control and monitor TV stations created from automated PHP image rotation. The platform supports live broadcasting, predefined programming, watermarking, among other features.
 
 *\* Real name withheld*
 
 ## Download
-Grab the [latest release](oliverbooth/vrpilot/releases), or you can build from source using the instructions below.
+Grab the [latest release](https://github.com/oliverbooth/vrpilot/releases), or you can build from source using the instructions below.
 
 ## Runtime Prerequisites
 The server host must be running PHP v7.x or above, and have the [`libGD`](https://www.php.net/manual/en/book.image.php) module installed and enabled.
@@ -22,6 +23,7 @@ Usage of the control panel requires a JavaScript enabled browser.
 ## Dependencies
 * [node](https://nodejs.org/) / npm
 * PHP v7.x in `PATH`
+* [Composer](https://getcomposer.org/)
 
 ## Building
 ```bash
