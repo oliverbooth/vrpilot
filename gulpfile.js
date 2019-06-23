@@ -21,7 +21,7 @@ function clean() {
 }
 
 function copy() {
-    src(["src/**/.*", "src/**/*.min.*", "src/**/*.ttf", "src/**/*.jpg", "src/**/*.png", "src/**/*.db"])
+    src(["src/**/.*", "src/**/*.min.*", "src/**/*.ttf", "src/**/*.jpg", "src/**/*.png", "src/**/*.db", "src/**/*.json"])
         .pipe(gulpCopy("dist", { prefix: 1 }))
         .pipe(inject.replace("<%PKG.VERSION%>", pkg.version));
 
@@ -47,7 +47,7 @@ function js() {
 }
 
 function php() {
-    return src("src/**/*.php", { read: false })
+    return src(["src/**/*.php", "src/**/*.phtml"], { read: false })
         .pipe(phpMinify())
         .pipe(htmlmin({ collapseWhitespace: true }))
         .pipe(inject.replace("<%PKG.VERSION%>", pkg.version))
