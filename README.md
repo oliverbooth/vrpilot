@@ -1,8 +1,9 @@
 # VRPilot
 ![](https://img.shields.io/github/package-json/v/oliverbooth/vrpilot.svg)
-![](https://img.shields.io/github/license/oliverbooth/vrpilot.svg)
-![](https://img.shields.io/github/issues/oliverbooth/vrpilot.svg)
+![](https://img.shields.io/circleci/build/github/oliverbooth/vrpilot/master.svg)
 ![](https://img.shields.io/david/dev/oliverbooth/vrpilot.svg)
+![](https://img.shields.io/github/issues/oliverbooth/vrpilot.svg)
+![](https://img.shields.io/github/license/oliverbooth/vrpilot.svg)
 
 PHP TV station control panel.
 
