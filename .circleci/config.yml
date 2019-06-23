@@ -1,0 +1,10 @@
+version: 2.1
+orbs:
+  jobs:
+    build:
+      steps:
+      - run:
+        command: |
+          npm i
+          composer install
+          npm run build
